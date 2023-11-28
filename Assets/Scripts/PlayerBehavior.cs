@@ -1,7 +1,7 @@
 ﻿/* Author : Raphaël Marczak - 2018/2020, for MIAMI Teaching (IUT Tarbes) and MMI Teaching (IUT Bordeaux Montaigne)
- * 
- * This work is licensed under the CC0 License. 
- * 
+ *
+ * This work is licensed under the CC0 License.
+ *
  */
 
 using System.Collections;
@@ -128,7 +128,7 @@ public class PlayerBehavior : MonoBehaviour
             {
                 m_dialogDisplayer.SetDialog(m_closestNPCDialog.GetDialog());
             }
-            else 
+            else
             {
                 ShootFireball();
             }
