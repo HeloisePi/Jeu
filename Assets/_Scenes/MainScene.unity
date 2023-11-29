@@ -485,15 +485,26 @@ MonoBehaviour:
   m_dialogWithPlayer:
   - text: ... [Espace pour continuer]
     color: {r: 0, g: 0, b: 0, a: 1}
+    needPercent: 0
+    percentNeeded: 0
   - text: Je m'appelle Ikan...
     color: {r: 0, g: 0, b: 0, a: 1}
+    needPercent: 0
+    percentNeeded: 0
   - text: "Et je ne sais pas ce que je fais sur cette \xEEle !"
     color: {r: 0, g: 0, b: 0, a: 1}
+    needPercent: 0
+    percentNeeded: 0
   - text: "Mon cano\xE9 s'est renvers\xE9... C'est tout ce dont je me souviens !"
     color: {r: 0, g: 0, b: 0, a: 1}
+    needPercent: 0
+    percentNeeded: 0
   - text: "[Fl\xE8ches : se d\xE9placer] [Espace : tirer ou parler \xE0 un NPC] [M:
       Montrer/Enlever la carte]"
     color: {r: 0, g: 0, b: 0, a: 1}
+    needPercent: 0
+    percentNeeded: 0
+  puo: {fileID: 0}
 --- !u!61 &239262487
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22752,6 +22763,18 @@ MonoBehaviour:
   - text: "MOUAHAHAHA ! J'ai vol\xE9 tous les bonbons de l'\xEEle, personne ne passera
       un bon Halloween !!!"
     color: {r: 0, g: 0, b: 0, a: 0}
+    needPercent: 0
+    percentNeeded: 0
+  - text: "Tu penses vraiment qu'un petit fant\xF4me comme toi me fait peur ?! Essaye
+      au moins de te d\xE9guiser ou trouve un objet..."
+    color: {r: 0, g: 0, b: 0, a: 0}
+    needPercent: 1
+    percentNeeded: 0
+  - text: "Bien essay\xE9 ! Tu aurais presque pu faire peur \xE0 un maternel !"
+    color: {r: 0, g: 0, b: 0, a: 0}
+    needPercent: 1
+    percentNeeded: 25
+  puo: {fileID: 0}
 --- !u!1 &871129442
 GameObject:
   m_ObjectHideFlags: 0
@@ -23635,12 +23658,19 @@ MonoBehaviour:
   m_dialogWithPlayer:
   - text: 'NPC : Bonjour ! '
     color: {r: 0, g: 0, b: 0, a: 1}
+    needPercent: 0
+    percentNeeded: 0
   - text: "Ikan : Bonjour, je cherche le village le plus proche. Sais-tu o\xF9 il
       se trouve ?"
     color: {r: 0, g: 0, b: 0, a: 1}
+    needPercent: 0
+    percentNeeded: 0
   - text: "NPC : Derri\xE8re la montagne. Il te faudra traverser la terrible Grotte
       Ah'Spirant'"
     color: {r: 0, g: 0, b: 0, a: 1}
+    needPercent: 0
+    percentNeeded: 0
+  puo: {fileID: 0}
 --- !u!58 &1430173580
 CircleCollider2D:
   m_ObjectHideFlags: 0
