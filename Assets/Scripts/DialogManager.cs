@@ -1,7 +1,7 @@
 ﻿/* Author : Raphaël Marczak - 2018/2020, for MIAMI Teaching (IUT Tarbes) and MMI Teaching (IUT Bordeaux Montaigne)
- * 
- * This work is licensed under the CC0 License. 
- * 
+ *
+ * This work is licensed under the CC0 License.
+ *
  */
 
 using System.Collections;
@@ -22,7 +22,7 @@ public struct DialogPage
 public class DialogManager : MonoBehaviour {
 
     public Text m_renderText;
-    private List<DialogPage> m_dialogToDisplay;
+    private List<DialogPage> m_dialogToDisplay = new List<DialogPage>();
 
     void Awake () {
 
@@ -43,7 +43,7 @@ public class DialogManager : MonoBehaviour {
             this.gameObject.SetActive(true);
         }
     }
-	
+
 	// Update is called once per frame
 	void Update () {
         if (m_renderText == null)
