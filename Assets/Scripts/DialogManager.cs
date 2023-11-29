@@ -16,6 +16,9 @@ public struct DialogPage
 {
     public string text;
     public Color color;
+
+    public bool needPercent;
+    public int percentNeeded;
 }
 
 // This class is used to correctly display a full dialog
@@ -64,6 +67,10 @@ public class DialogManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             m_dialogToDisplay.RemoveAt(0);
+
+            while (m_dialogToDisplay.Count > 0 && m_dialogToDisplay[0].needPercent && m_dialogToDisplay[0].percentNeeded != Inventory.instance.coinsCount) {
+              m_dialogToDisplay.RemoveAt(0);
+            }
         }
 	}
 

@@ -1,18 +1,31 @@
 ﻿/* Author : Raphaël Marczak - 2018/2020, for MIAMI Teaching (IUT Tarbes) and MMI Teaching (IUT Bordeaux Montaigne)
- * 
- * This work is licensed under the CC0 License. 
- * 
+ *
+ * This work is licensed under the CC0 License.
+ *
  */
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using static Inventory;
+using System.Linq; // Utiliser la méthode Take()
+
+
+
 
 public class Dialog : MonoBehaviour {
     public List<DialogPage> m_dialogWithPlayer;
-
+    public Inventory puo;
     public List<DialogPage> GetDialog()
     {
+    //Debug.Log(m_dialogWithPlayer.IdSkip);
+
+     // List<DialogPage> firstTwoDialogs = m_dialogWithPlayer.Take(2).ToList();
+      //Debug.Log(firstTwoDialogs);
+      //Debug.Log(List<DialogPage>);
+
         return m_dialogWithPlayer;
+        //return firstTwoDialogs;
+
     }
 }
