@@ -1671,7 +1671,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.81
+  m_Radius: 0.52
 --- !u!212 &274949969
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1756,7 +1756,6 @@ MonoBehaviour:
   m_leftSprite: {fileID: 21300000, guid: fada494233eb54e92b399f071b6af85c, type: 3}
   m_rightSprite: {fileID: 21300000, guid: d4a4deb0cf49141ebb291d60c411d552, type: 3}
   m_backSprite: {fileID: 21300000, guid: 5bf2d13d02f724b6a9589e8bd90bb78e, type: 3}
-  m_fireBall: {fileID: 1502969918981896, guid: dd8b7b33984359b49a25a7c46d305262, type: 3}
   m_map: {fileID: 1634910905}
   m_dialogDisplayer: {fileID: 92778327}
 --- !u!1 &286368726
@@ -22560,9 +22559,11 @@ GameObject:
   - component: {fileID: 859707612}
   - component: {fileID: 859707614}
   - component: {fileID: 859707613}
+  - component: {fileID: 859707616}
+  - component: {fileID: 859707615}
   m_Layer: 0
   m_Name: Ennemy
-  m_TagString: Untagged
+  m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22663,10 +22664,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.33722687, y: -2.6977768}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -22677,7 +22678,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.04, y: 25.1}
+  m_Size: {x: 31.901138, y: 52.077805}
   m_EdgeRadius: 0
 --- !u!50 &859707613
 Rigidbody2D:
@@ -22722,6 +22723,35 @@ MonoBehaviour:
   mainSprite: {fileID: 859707610}
   speed: 11.05
   durationBeforeSwitching: 6.78
+--- !u!114 &859707615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859707609}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce40368f7918b74fae52f5adcaa1e2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_renderText: {fileID: 660282199}
+--- !u!114 &859707616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859707609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81c60eb2fa0558e418f27e555c8aff5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_dialogWithPlayer:
+  - text: "MOUAHAHAHA ! J'ai vol\xE9 tous les bonbons de l'\xEEle, personne ne passera
+      un bon Halloween !!!"
+    color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &871129442
 GameObject:
   m_ObjectHideFlags: 0

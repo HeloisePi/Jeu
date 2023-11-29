@@ -21,7 +21,6 @@ public class PlayerBehavior : MonoBehaviour
     public Sprite m_rightSprite = null;
     public Sprite m_backSprite = null;
 
-    public GameObject m_fireBall = null; // Object the player can shoot
 
     public GameObject m_map = null;
     public DialogManager m_dialogDisplayer;
@@ -128,10 +127,7 @@ public class PlayerBehavior : MonoBehaviour
             {
                 m_dialogDisplayer.SetDialog(m_closestNPCDialog.GetDialog());
             }
-            else
-            {
-                ShootFireball();
-            }
+
         }
     }
 
@@ -157,21 +153,6 @@ public class PlayerBehavior : MonoBehaviour
         }
     }
 
-    // Creates a fireball, and launches it
-    private void ShootFireball()
-    {
-        GameObject newFireball = Instantiate(m_fireBall, this.transform) as GameObject;
-
-        FireBehavior fireBallBehavior = newFireball.GetComponent<FireBehavior>();
-
-        if (fireBallBehavior != null)
-        {
-            // Lauches the fireball upward
-            // (Vector2 represents a direction in x and y ;
-            // so Vector2(0f, 1f) is a direction of 0 in x and 1 in y (up)
-            fireBallBehavior.Launch(new Vector2(0f, 1f));
-        }
-    }
 
 
     // This is automatically called by Unity when the gameObject (here the player)
@@ -182,7 +163,7 @@ public class PlayerBehavior : MonoBehaviour
     //   displays it instantaneously
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "NPC")
+        if (collision.tag == "Ennemy")
         {
             m_closestNPCDialog = collision.GetComponent<Dialog>();
         }
@@ -203,7 +184,7 @@ public class PlayerBehavior : MonoBehaviour
     //   (as it has been displayed, and must only be displayed once)
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "NPC")
+        if (collision.tag == "Ennemy")
         {
             m_closestNPCDialog = null;
         }
