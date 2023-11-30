@@ -7,6 +7,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Inventory;
 
 // Represents the cardinal directions (South, North, West, East)
 public enum CardinalDirections { CARDINAL_S, CARDINAL_N, CARDINAL_W, CARDINAL_E };
@@ -20,6 +21,28 @@ public class PlayerBehavior : MonoBehaviour
     public Sprite m_leftSprite = null;
     public Sprite m_rightSprite = null;
     public Sprite m_backSprite = null;
+
+    public Sprite m_frontSpriteHache = null;
+    public Sprite m_leftSpriteHache = null;
+    public Sprite m_rightSpriteHache = null;
+    public Sprite m_backSpriteHache = null;
+
+    public Sprite m_frontSpriteEpee = null;
+    public Sprite m_leftSpriteEpee = null;
+    public Sprite m_rightSpriteEpee = null;
+    public Sprite m_backSpriteEpee = null;
+
+    public Sprite m_frontSpriteChapeau = null;
+    public Sprite m_leftSpriteChapeau = null;
+    public Sprite m_rightSpriteChapeau = null;
+    public Sprite m_backSpriteChapeau = null;
+
+    public Sprite m_frontSpriteFaux = null;
+    public Sprite m_leftSpriteFaux = null;
+    public Sprite m_rightSpriteFaux = null;
+    public Sprite m_backSpriteFaux= null;
+
+    public Inventory puo;
 
 
     public GameObject m_map = null;
@@ -95,6 +118,81 @@ public class PlayerBehavior : MonoBehaviour
     // physics (i.e. everything not related to RigidBody)
     private void Update()
     {
+      if (Inventory.instance.coinsCount == 25) {
+        if (m_direction == CardinalDirections.CARDINAL_N)
+        {
+            m_renderer.sprite = m_backSpriteChapeau;
+        }
+        else if (m_direction == CardinalDirections.CARDINAL_S)
+        {
+            m_renderer.sprite = m_frontSpriteChapeau;
+        }
+        else if (m_direction == CardinalDirections.CARDINAL_E)
+        {
+            m_renderer.sprite = m_rightSpriteChapeau;
+        }
+        else if (m_direction == CardinalDirections.CARDINAL_W)
+        {
+            m_renderer.sprite = m_leftSpriteChapeau;
+        }
+      }
+
+      if (Inventory.instance.coinsCount == 50) {
+        if (m_direction == CardinalDirections.CARDINAL_N)
+        {
+            m_renderer.sprite = m_backSpriteEpee;
+        }
+        else if (m_direction == CardinalDirections.CARDINAL_S)
+        {
+            m_renderer.sprite = m_frontSpriteEpee;
+        }
+        else if (m_direction == CardinalDirections.CARDINAL_E)
+        {
+            m_renderer.sprite = m_rightSpriteEpee;
+        }
+        else if (m_direction == CardinalDirections.CARDINAL_W)
+        {
+            m_renderer.sprite = m_leftSpriteEpee;
+        }
+      }
+
+      if (Inventory.instance.coinsCount == 75) {
+        if (m_direction == CardinalDirections.CARDINAL_N)
+        {
+            m_renderer.sprite = m_backSpriteHache;
+        }
+        else if (m_direction == CardinalDirections.CARDINAL_S)
+        {
+            m_renderer.sprite = m_frontSpriteHache;
+        }
+        else if (m_direction == CardinalDirections.CARDINAL_E)
+        {
+            m_renderer.sprite = m_rightSpriteHache;
+        }
+        else if (m_direction == CardinalDirections.CARDINAL_W)
+        {
+            m_renderer.sprite = m_leftSpriteHache;
+        }
+      }
+
+      if (Inventory.instance.coinsCount == 100) {
+        if (m_direction == CardinalDirections.CARDINAL_N)
+        {
+            m_renderer.sprite = m_backSpriteFaux;
+        }
+        else if (m_direction == CardinalDirections.CARDINAL_S)
+        {
+            m_renderer.sprite = m_frontSpriteFaux;
+        }
+        else if (m_direction == CardinalDirections.CARDINAL_E)
+        {
+            m_renderer.sprite = m_rightSpriteFaux;
+        }
+        else if (m_direction == CardinalDirections.CARDINAL_W)
+        {
+            m_renderer.sprite = m_leftSpriteFaux;
+        }
+      }
 
         // If the player presses M, the map will be activated if not on screen
         // or desactivated if already on screen
@@ -115,7 +213,10 @@ public class PlayerBehavior : MonoBehaviour
             return;
         }
 
-        ChangeSpriteToMatchDirection();
+
+         if (Inventory.instance.coinsCount == 0) {
+          ChangeSpriteToMatchDirection();
+         }
 
         // If the player presses SPACE, then two solution
         // - If there is a dialog ready to be displayed (i.e. the player is closed to a NPC)
@@ -135,6 +236,7 @@ public class PlayerBehavior : MonoBehaviour
     // (back when going North, front when going south, right when going east, left when going west)
     private void ChangeSpriteToMatchDirection()
     {
+
         if (m_direction == CardinalDirections.CARDINAL_N)
         {
             m_renderer.sprite = m_backSprite;
@@ -161,6 +263,7 @@ public class PlayerBehavior : MonoBehaviour
     //   displayed when SPACE will be pressed
     // - the player is in an instantDialog zone, then he grabs the dialog information and
     //   displays it instantaneously
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Ennemy")
@@ -182,6 +285,7 @@ public class PlayerBehavior : MonoBehaviour
     // - the player was in an NPC zone, then the dialog information is removed
     // - the player was in an instantDialog zone, then the instantDialog is destroyed
     //   (as it has been displayed, and must only be displayed once)
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Ennemy")

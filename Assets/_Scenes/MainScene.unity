@@ -3132,6 +3132,27 @@ MonoBehaviour:
   m_leftSprite: {fileID: 21300000, guid: fada494233eb54e92b399f071b6af85c, type: 3}
   m_rightSprite: {fileID: 21300000, guid: d4a4deb0cf49141ebb291d60c411d552, type: 3}
   m_backSprite: {fileID: 21300000, guid: 5bf2d13d02f724b6a9589e8bd90bb78e, type: 3}
+  m_frontSpriteHache: {fileID: 21300000, guid: b6853e8ec33224564b62a81f482ede70, type: 3}
+  m_leftSpriteHache: {fileID: 21300000, guid: b6853e8ec33224564b62a81f482ede70, type: 3}
+  m_rightSpriteHache: {fileID: 21300000, guid: 1bda458cc469046c6b435e7bd7323084, type: 3}
+  m_backSpriteHache: {fileID: 21300000, guid: 70498bca920a54c06aa492a51b50884f, type: 3}
+  m_frontSpriteEpee: {fileID: 21300000, guid: cb1f1b4da6e854448806b1eaaf305dc1, type: 3}
+  m_leftSpriteEpee: {fileID: 21300000, guid: cb1f1b4da6e854448806b1eaaf305dc1, type: 3}
+  m_rightSpriteEpee: {fileID: 21300000, guid: 420568c7d34d4468b82b8995a87a2fe5, type: 3}
+  m_backSpriteEpee: {fileID: 21300000, guid: 8b7b7872944834171a870009dcec8ba3, type: 3}
+  m_frontSpriteChapeau: {fileID: 21300000, guid: d0ef0bf508c8448409707a44e56b033a,
+    type: 3}
+  m_leftSpriteChapeau: {fileID: 21300000, guid: d0ef0bf508c8448409707a44e56b033a,
+    type: 3}
+  m_rightSpriteChapeau: {fileID: 21300000, guid: d6e90c5ff2d744e3d9ff3aad3c2e57c7,
+    type: 3}
+  m_backSpriteChapeau: {fileID: 21300000, guid: 748847e17cceb445ca3bc32112afda83,
+    type: 3}
+  m_frontSpriteFaux: {fileID: 21300000, guid: 11fdc70288cab4b9d81a0e8e916657b3, type: 3}
+  m_leftSpriteFaux: {fileID: 21300000, guid: 11fdc70288cab4b9d81a0e8e916657b3, type: 3}
+  m_rightSpriteFaux: {fileID: 21300000, guid: a7d53afc88033460a8372e43304b3ef1, type: 3}
+  m_backSpriteFaux: {fileID: 21300000, guid: c704958d67f7b46a7bf2e6f50a26e2c1, type: 3}
+  puo: {fileID: 0}
   m_map: {fileID: 1634910905}
   m_dialogDisplayer: {fileID: 92778327}
 --- !u!1 &286368726
@@ -26764,6 +26785,19 @@ MonoBehaviour:
     color: {r: 0, g: 0, b: 0, a: 0}
     needPercent: 1
     percentNeeded: 25
+  - text: "Pas mal ! Avec le double de \xE7a j'y croirais presque, retente ta chance
+      une prochaine fois !"
+    color: {r: 0, g: 0, b: 0, a: 0}
+    needPercent: 1
+    percentNeeded: 50
+  - text: "Oh..! J'ai faillit presque sursaut\xE9 ! Non je rigole HAHAHAHA "
+    color: {r: 0, g: 0, b: 0, a: 0}
+    needPercent: 1
+    percentNeeded: 75
+  - text: "AHHHHHH c'est bon t'as gagn\xE9 pars loin de moi !!!"
+    color: {r: 0, g: 0, b: 0, a: 0}
+    needPercent: 1
+    percentNeeded: 100
   puo: {fileID: 0}
 --- !u!1 &870041251
 GameObject:
