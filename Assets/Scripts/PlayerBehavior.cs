@@ -8,6 +8,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static Inventory;
+using static Timeur;
 using UnityEngine.SceneManagement;
 
 // Represents the cardinal directions (South, North, West, East)
@@ -236,6 +237,7 @@ public class PlayerBehavior : MonoBehaviour
                     m_dialogDisplayer.SetDialog(m_closestNPCDialog.GetDialog());
 
                     StartCoroutine(LoadVictoryScene());
+
 
                 }
                 
