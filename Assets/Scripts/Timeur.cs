@@ -34,8 +34,7 @@ public class Timeur : MonoBehaviour
     }
 
     void TimerExecute()
-    {
-        UnityEngine.Debug.Log("timer");
+    { 
         SceneManager.LoadSceneAsync("Main GameOver");
         // Envoyer à la scéne de mort
     }

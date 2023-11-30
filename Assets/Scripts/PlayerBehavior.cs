@@ -8,6 +8,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static Inventory;
+using UnityEngine.SceneManagement;
 
 // Represents the cardinal directions (South, North, West, East)
 public enum CardinalDirections { CARDINAL_S, CARDINAL_N, CARDINAL_W, CARDINAL_E };
@@ -226,10 +227,30 @@ public class PlayerBehavior : MonoBehaviour
         {
             if (m_closestNPCDialog != null)
             {
-                m_dialogDisplayer.SetDialog(m_closestNPCDialog.GetDialog());
+                if(Inventory.instance.coinsCount != 100)
+                {
+                    m_dialogDisplayer.SetDialog(m_closestNPCDialog.GetDialog());
+                }
+                else
+                { 
+                    m_dialogDisplayer.SetDialog(m_closestNPCDialog.GetDialog());
+
+                    StartCoroutine(LoadVictoryScene());
+
+                }
+                
             }
 
         }
+    }
+
+    IEnumerator LoadVictoryScene()
+    {
+        // Attendre 3 secondes
+        yield return new WaitForSeconds(3f);
+
+        // Charger la scène "Victory"
+        SceneManager.LoadSceneAsync("Victory");
     }
 
     // Changes the player sprite regarding it position
